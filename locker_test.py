@@ -1,6 +1,30 @@
 import unittest
 
-from locker import Credentials
+from locker import Credentials, User
+
+class TestUser(unittest.TestCase):
+    def setUp(self):
+        self.new_user = User("sirgama","42625435")
+        
+    def tearDown(self):
+        User.user_list = []
+        
+    def test_init(self):
+        self.assertEqual(self.new_user.username, "sirgama")
+        self.assertEqual(self.new_user.password,"42625435")
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 class TestCredentials(unittest.TestCase):
     
@@ -10,6 +34,8 @@ class TestCredentials(unittest.TestCase):
     
     def tearDown(self):
         Credentials.credential_list = []
+        
+        
         
     def test_init(self):
         self.assertEqual(self.new_credentials.platform,"Instagram")
