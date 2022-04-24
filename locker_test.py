@@ -70,6 +70,9 @@ class TestCredentials(unittest.TestCase):
         found_platform = Credentials.find_by_platform("Twitter")
         self.assertEqual(found_platform.username, test_credential.username)
         
+    def test_display_credentials(self):
+        self.assertEqual(Credentials.display_credentials(), Credentials.credential_list)
+        
 
 
 

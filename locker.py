@@ -52,3 +52,7 @@ class Credentials:      #class that creates instances of passwords
         for media_platform in cls.credential_list:
             if media_platform.platform == social:
                 return media_platform
+    
+    @classmethod
+    def display_credentials(cls):
+        return cls.credential_list
