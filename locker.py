@@ -1,5 +1,4 @@
 
-from operator import truediv
 
 
 class User: #creates a user instance for login purposes
@@ -14,14 +13,6 @@ class User: #creates a user instance for login purposes
     def save_user(self):
         User.user_list.append(self)
     
-
-
-
-
-
-
-
-
 
 
 
