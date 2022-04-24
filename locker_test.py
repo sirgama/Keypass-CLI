@@ -13,8 +13,10 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.username, "sirgama")
         self.assertEqual(self.new_user.password,"42625435")
         
-        
-
+    def test_save_user(self):
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list),1)
+ 
         
         
         
@@ -35,8 +37,7 @@ class TestCredentials(unittest.TestCase):
     def tearDown(self):
         Credentials.credential_list = []
         
-        
-        
+       
     def test_init(self):
         self.assertEqual(self.new_credentials.platform,"Instagram")
         self.assertEqual(self.new_credentials.username,"sirgama")

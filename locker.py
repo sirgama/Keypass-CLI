@@ -9,7 +9,7 @@ class User: #creates a user instance for login purposes
         
         
     def save_user(self):
-        User.save_user.append(self)
+        User.user_list.append(self)
     
 
 
