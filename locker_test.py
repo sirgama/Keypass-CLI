@@ -62,6 +62,14 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credential_list),2)
         
+    def test_find_credentials_by_platform(self):
+        self.new_credentials.save_credentials()
+        test_credential = Credentials("Twitter","Stella","12345")
+        test_credential.save_credentials()
+        
+        found_platform = Credentials.find_by_platform("Twitter")
+        self.assertEqual(found_platform.username, test_credential.username)
+        
 
 
 
