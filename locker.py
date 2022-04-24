@@ -37,4 +37,9 @@ class Credentials:      #class that creates instances of passwords
     def save_credentials (self):
         Credentials.credential_list.append(self)
         
+    def delete_credentials (self):
+        Credentials.credential_list.remove(self)
         
+    @classmethod
+    def display_credentials (cls):
+         return cls.credential_list
