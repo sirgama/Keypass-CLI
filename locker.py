@@ -10,6 +10,7 @@ class Credentials:      #class that creates instances of passwords
         self.username = username
         self.password = password
         
-    
+    def save_credentials (self):
+        Credentials.credential_list.append(self)
         
     
