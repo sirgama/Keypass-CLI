@@ -65,7 +65,7 @@ def main():
             print("                                                                   ")
             print("Use the following codes to proceed:")
             print("UP: Use your own password \n GP: Let keypass generate a random password for you")
-            pass_option = input("").lower().strip()
+            pass_option = input("").lower()
             
             if pass_option == "up":
                 password = input("Enter Password:  ")
@@ -107,22 +107,22 @@ def main():
         print("Delete credential: DL")
         print("Exit From Keypass:  EX")
         
-        user_code = input("").lower().strip()
+        user_code = input("").lower()
         
         if user_code == "nc":
             print("Create a new credential!")
             print(".................................")
             print(".................................")
             print("Enter Application/Software name (Eg: Github)")
-            platform = input()
+            platform = input("")
             print("Print your Application Username: ")
-            username = input()
+            username = input("")
             print("Your Application password: ")
-            password = input()
+            password = input("")
             
             save_credentials(create_credentials(platform,username,password))
             
-            print("Credentials for {platform} successfully created and saved")
+            print(f"Credentials for {platform} successfully created and saved")
             
             
             
