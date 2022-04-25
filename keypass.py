@@ -80,6 +80,12 @@ def main():
         print("Kindly save your password!")
     
     elif user_code == "lo":
+        print("_-_"*100)
+        print(" ")
+        print("Enter your Keypass username and password to proceed!")
+        
+        username = input("Username:  ")
+        password = input("Password:   ")
         
 
 

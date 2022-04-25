@@ -12,6 +12,15 @@ class User: #creates a user instance for login purposes
         
     def save_user(self):
         User.user_list.append(self)
+        
+    @classmethod
+    def verify_user(cls, username, password):
+        userinstance = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                userinstance = username
+        return userinstance
+        
     
 
 
