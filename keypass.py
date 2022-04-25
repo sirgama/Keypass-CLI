@@ -42,11 +42,7 @@ def main():
     print("----------------                                                   ------------------")
     print("------------                                                          ---------------")
     print("---------                                                                 -----------")
-    print("                                                                                     ")
-    print("                                                                                     ")
-    print("                                                                                     ")
-    print("                                                                                     ")
-    
+ 
     print("Hello, Keypass helps you to store your credentials in a safe place")
     print("Use these commands to proceed to your keypass account")
     print("                                                                   ")
@@ -66,8 +62,12 @@ def main():
         
         while True:
             print("                                                                   ")
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             print("Use the following codes to proceed:")
             print("UP: Use your own password \n GP: Let keypass generate a random password for you")
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             pass_option = input("").lower()
             
             if pass_option == "up":
@@ -82,9 +82,13 @@ def main():
         save_user(create_user(username,password))
         
         print("-_-"*100)
+        print("----------------------------------------------------------")
+        print("----------------------------------------------------------")
         print("Account created Successfully ")
         print(f"Your username is: {username}, and Password is: {password}")
         print("Kindly save your password!")
+        print("----------------------------------------------------------")
+        print("----------------------------------------------------------")
     
     elif user_code == "lo":
         print("_-_"*100)
@@ -98,10 +102,15 @@ def main():
         
         if log_user == login:
             print("_-_"*60)
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             print("Hi {username}, Welcome back to Keypass!!!")
-            print("----------------------------------------------")
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
     
     while True:
+        print("----------------------------------------------------------")
+        print("----------------------------------------------------------")
         print("Use the following codes to proceed:")
         print("")
         print("Create new credentials: NC")
@@ -109,10 +118,14 @@ def main():
         print("Search for a credential: SC")
         print("Delete credential: DL")
         print("Exit From Keypass:  EX")
+        print("----------------------------------------------------------")
+        print("----------------------------------------------------------")
         
         user_code = input("").lower()
         
         if user_code == "nc":
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             print("Create a new credential!")
             print(".................................")
             print(".................................")
@@ -125,12 +138,17 @@ def main():
             
             save_credentials(create_credentials(platform,username,password))
             
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             print(f"Credentials for {platform} successfully created and saved")
             
             
             print("\n")
-            
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
         elif user_code == "dc":
+            print("----------------------------------------------------------")
+            print("----------------------------------------------------------")
             print("Here's a list of all Credentials")
             print("\n")
             for credential in display_credentials():
@@ -138,6 +156,8 @@ def main():
                 print("\n")
                 print(".................................................................................")
                 print("\n")
+                print("----------------------------------------------------------")
+                print("----------------------------------------------------------")
             else:
                 print("No existing user credentials. Please create some")
                 
