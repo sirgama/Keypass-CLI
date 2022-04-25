@@ -99,7 +99,33 @@ def main():
             print("----------------------------------------------")
     
     while True:
+        print("Use the following codes to proceed:")
+        print("")
+        print("Create new credentials: NC")
+        print("Display all credentials: DC")
+        print("Search for a credential: SC")
+        print("Delete credential: DL")
+        print("Exit From Keypass:  EX")
         
+        user_code = input("").lower().strip()
+        
+        if user_code == "nc":
+            print("Create a new credential!")
+            print(".................................")
+            print(".................................")
+            print("Enter Application/Software name (Eg: Github)")
+            platform = input()
+            print("Print your Application Username: ")
+            username = input()
+            print("Your Application password: ")
+            password = input()
+            
+            save_credentials(create_credentials(platform,username,password))
+            
+            print("Credentials for {platform} successfully created and saved")
+            
+            
+            
         
 
 
