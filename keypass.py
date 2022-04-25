@@ -2,6 +2,7 @@
 
 from locker import Credentials, User
 
+
 def create_user(username, password):
     new_user = User(username, password)
     return new_user
@@ -24,3 +25,31 @@ def delete_credential(locker):
     
 def display_credentials():
     return Credentials.display_credentials()
+
+
+def main():
+    print("                                                                                     ")
+    print("-----------------------------Welcome to KEYPASS!!!-----------------------------------")
+    print("-----------------------The command line password saving tool-------------------------")
+    print("--------------------                                           ----------------------")
+    print("----------------                                                   ------------------")
+    print("------------                                                          ---------------")
+    print("---------                                                                 -----------")
+    print("                                                                                     ")
+    print("                                                                                     ")
+    print("                                                                                     ")
+    print("                                                                                     ")
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    
+    main()   
