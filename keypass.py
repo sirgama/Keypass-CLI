@@ -44,6 +44,7 @@ def main():
     print("Use these commands to proceed to your keypass account")
     print("                                                                   ")
     print(" To create account use: CA ")
+    print(" To login with an existing account use: LO ")
     print("                                                                   ")
     print("                                                                   ")
     
@@ -70,6 +71,16 @@ def main():
                 break
             else:
                 print("Kindly select a valid option")
+                
+        save_user(create_user(username,password))
+        
+        print("-_-"*100)
+        print("Account created Successfully ")
+        print(f"Your username is: {username}, and Password is: {password}")
+        print("Kindly save your password!")
+    
+    elif user_code == "lo":
+        
 
 
 
