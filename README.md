@@ -1,4 +1,5 @@
 # KEYPASS-CLI
+<img src="./assets/keypasscli.png">
 
 Simple Python App that creates new credentials with properties. Touches on Test Driven Development using unittest (Python test framework).
 
