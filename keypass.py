@@ -24,6 +24,9 @@ def save_credentials(locker):
 def find_credential(social):
     return Credentials.find_by_platform(social)
 
+def check_existing_credential(social):
+    return Credentials.credential_exists(social)
+
 def delete_credential(locker):
     locker.delete_credentials()
     
@@ -145,8 +148,16 @@ def main():
             print("\n")
             print("Kindly enter the Software/application name:")
             search_item = input("")
-            if find_credential(search_item):
-                search_
+            if check_existing_credential(search_item):
+                search_platform = find_credential(search_item)
+                print("----------------------------------------------------------")
+                print(f"Application: {search_platform.platform}")
+                print(f"Username: {search_platform.username}   Password: {search_platform.password}")
+                print("__________________________________________________________")
+            else: 
+                print("The Account doesnt seem to exist")
+        
+                
         
 
 
