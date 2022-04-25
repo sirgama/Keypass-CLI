@@ -39,6 +39,37 @@ def main():
     print("                                                                                     ")
     print("                                                                                     ")
     print("                                                                                     ")
+    
+    print("Hello, Keypass helps you to store your credentials in a safe place")
+    print("Use these commands to proceed to your keypass account")
+    print("                                                                   ")
+    print(" To create account use: CA ")
+    print("                                                                   ")
+    print("                                                                   ")
+    
+    user_code = input("").lower().strip()
+    
+    if user_code == "ca":
+        
+        print("To Create Account, Kindly fill the following:")
+        
+        username = input("Enter Username:  ")
+        print("---------------------------------")
+        
+        while True:
+            print("                                                                   ")
+            print("Use the following codes to proceed:")
+            print("UP: Use your own password \n GP: Let keypass generate a random password for you")
+            pass_option = input("").lower().strip()
+            
+            if pass_option == "up":
+                password = input("Enter Password:  ")
+                break
+            elif pass_option == "gp":
+                password = "*#99108Kgh%4"
+                break
+            else:
+                print("Kindly select a valid option")
 
 
 
