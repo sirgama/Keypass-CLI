@@ -125,7 +125,28 @@ def main():
             print(f"Credentials for {platform} successfully created and saved")
             
             
+            print("\n")
             
+        elif user_code == "dc":
+            print("Here's a list of all Credentials")
+            print("\n")
+            for credential in display_credentials():
+                print(f"Account:  {credential.platform}    Username: {username}    Password:  {password}")
+                print("\n")
+                print(".................................................................................")
+                print("\n")
+            else:
+                print("No existing user credentials. Please create some")
+                
+                
+        elif user_code == "sc":
+            
+            print("Let's help you search for stored  account details")
+            print("\n")
+            print("Kindly enter the Software/application name:")
+            search_item = input("")
+            if find_credential(search_item):
+                search_
         
 
 
