@@ -166,7 +166,7 @@ def main():
             
             print("Let's help you search for stored  account details")
             print("\n")
-            print("Kindly enter the Software/application name:")
+            print("Kindly enter the Software/application name you want to search for:")
             search_item = input("")
             if find_credential(search_item):
                 search_platform = find_credential(search_item)
