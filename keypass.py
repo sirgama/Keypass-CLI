@@ -10,6 +10,10 @@ def create_user(username, password):
 def save_user(locker):
     locker.save_user()
 
+def log_user(username, password):
+    confirm_user = User.verify_user(username,password)
+    return confirm_user
+
 def create_credentials(platform, username, password):
     new_credentials = Credentials(platform, username, password)
     return new_credentials
@@ -86,6 +90,16 @@ def main():
         
         username = input("Username:  ")
         password = input("Password:   ")
+        
+        login = log_user(username, password)
+        
+        if log_user == login:
+            print("_-_"*60)
+            print("Hi {username}, Welcome back to Keypass!!!")
+            print("----------------------------------------------")
+    
+    while True:
+        
         
 
 
