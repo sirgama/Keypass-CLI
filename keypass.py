@@ -148,7 +148,7 @@ def main():
             print("\n")
             print("Kindly enter the Software/application name:")
             search_item = input("")
-            if check_existing_credential(search_item):
+            if find_credential(search_item):
                 search_platform = find_credential(search_item)
                 print("----------------------------------------------------------")
                 print(f"Application: {search_platform.platform}")
@@ -156,8 +156,29 @@ def main():
                 print("__________________________________________________________")
             else: 
                 print("The Account doesnt seem to exist")
-        
                 
+        elif user_code == "dl":
+            print("\n")
+            print("Kindly enter the Software/application name you want to delele")
+            search_item = input("")
+            if find_credential(search_item):
+                search_platform = find_credential(search_item)
+                print("----------------------------------------------------------")
+                search_platform.delete_credentials()
+                print("\n")
+                print(f"Application: {search_platform.platform} with its respective details have been deleted") 
+                print("\n")
+                
+            else:
+                print("Application doesn't seem to exist in our records")
+                
+        elif user_code == "ex":
+            print("\n")
+            print("Thank you for your time in KEYPASS, we hope it was of great help")
+            
+            break
+        else:
+            print("Kindly choose a valid option") 
         
 
 
