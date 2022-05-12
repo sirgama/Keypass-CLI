@@ -100,6 +100,9 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(found_platform.username, test_credential.username)
         
     def test_display_credentials(self):
+        '''
+        method that displays all the credentials that has been saved by the user
+        '''
         self.assertEqual(Credentials.display_credentials(), Credentials.credential_list)
         
 

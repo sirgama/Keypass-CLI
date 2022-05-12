@@ -30,6 +30,15 @@ def check_existing_credential(social):
 def delete_credential(locker):
     locker.delete_credentials()
     
+def generate_Password():
+    
+    auto_password=Credentials.generatePassword()
+    return auto_password
+
+def copy_password(social):
+      
+    return Credentials.copy_password(social)
+    
 def display_credentials():
     return Credentials.display_credentials()
 
