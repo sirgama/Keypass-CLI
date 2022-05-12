@@ -83,7 +83,7 @@ def main():
                 password = input("Enter Password:  ")
                 break
             elif pass_option == "gp":
-                password = "*#99108Kgh%4"
+                password = generate_Password()
                 break
             else:
                 print("Kindly select a valid option")
@@ -208,17 +208,7 @@ def main():
             break
         else:
             print("Kindly choose a valid option") 
-        
-
-
-
-
-
-
-
-
-
-
+ 
 
 if __name__ == '__main__':
     
